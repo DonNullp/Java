@@ -2,11 +2,6 @@ public class Main {
     public static void main(String[] argv) {
         System.out.println("Hello world");
         System.out.println("Перчиков Олексій, ПЗ-21-1/9");
-
-        // Створюємо об'єкт дати
-        Date currentDate = new Date();
-        
-        // Виводимо повідомлення з поточною датою
-        System.out.println("Сьогоднішня дата: " + currentDate);
+        System.out.println("Сьогоднішня дата: 10-10-2024");
     }
 }
