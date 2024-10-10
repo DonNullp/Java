@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+        // Unicode для выбранных смайликов
+        String emoji1 = "\uD83D\uDE00";  // 😀
+        String emoji2 = "\uD83D\uDE02";  // 😂
+        String emoji3 = "\uD83D\uDE0D";  // 😍
+
+        // Выводим смайлики на экран
+        System.out.println(emoji1);
+        System.out.println(emoji2);
+        System.out.println(emoji3);
+    }
+}
