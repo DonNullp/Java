@@ -1,0 +1,25 @@
+public class Main {
+    public static void main(String[] args) {
+        // Два довільні рядки
+        String string1 = "Hello, world!";
+        String string2 = "Hello, Java!";
+
+        // Порівняння рядків
+        if (string1.equals(string2)) {
+            System.out.println("Рядки однакові.");
+        } else {
+            System.out.println("Рядки різні.");
+        }
+
+        // Також можна порівняти рядки за допомогою методу compareTo
+        int result = string1.compareTo(string2);
+
+        if (result == 0) {
+            System.out.println("Рядки повністю рівні.");
+        } else if (result < 0) {
+            System.out.println("Рядок 1 менший за рядок 2.");
+        } else {
+            System.out.println("Рядок 1 більший за рядок 2.");
+        }
+    }
+}
