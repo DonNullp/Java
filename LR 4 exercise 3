@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Читання рядка з клавіатури
+        System.out.print("Введіть ваше вітання: ");
+        String input = scanner.nextLine();
+
+        // Використання тернарного оператора для перевірки
+        String response = input.equals("Привіт") ? "Навзаєм" : "Інше вітання";
+
+        // Виведення результату
+        System.out.println(response);
+    }
+}
