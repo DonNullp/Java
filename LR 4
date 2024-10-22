@@ -1,0 +1,14 @@
+public class Main {
+    public static void main(String[] args) {
+        int x = 3;  // Присвоюємо значення 3 змінній x
+        int y = (int) (Math.random() * 10);  // Генеруємо випадкове число від 0 до 9
+
+        System.out.println("y = " + y);  // Виводимо значення y для перевірки
+
+        if ((x < y) && (x >= 3)) {  // Якщо x < y і x >= 3
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+}
