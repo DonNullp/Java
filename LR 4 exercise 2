@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Введіть літеру (А або В): ");
+        char letter = scanner.next().charAt(0);  // Зчитуємо перший введений символ
+
+        switch (letter) {
+            case 'А':
+            case 'а':  // Додаємо обробку для малої літери 'а'
+                int randomInt = 1 + (int) (Math.random() * 10);  // Генеруємо ціле число від 1 до 10
+                System.out.println("Згенероване ціле число: " + randomInt);
+                break;
+
+            case 'В':
+            case 'в':  // Додаємо обробку для малої літери 'в'
+                double randomDouble = 10.0 + Math.random() * (100.0 - 10.0);  // Генеруємо дійсне число від 10.0 до 100.0
+                System.out.println("Згенероване дійсне число: " + randomDouble);
+                break;
+
+            default:
+                System.out.println("Використання програми:");
+                System.out.println("Введіть 'А' для генерації цілого числа від 1 до 10.");
+                System.out.println("Введіть 'В' для генерації дійсного числа від 10.0 до 100.0.");
+                break;
+        }
+
+        scanner.close();  // Закриваємо сканер
+    }
+}
