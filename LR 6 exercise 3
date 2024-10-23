@@ -1,0 +1,47 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        // Запитуємо кількість точок
+        System.out.print("Введіть кількість точок: ");
+        int n = scanner.nextInt();
+
+        // Створюємо масив точок (кожна точка - це масив з двох елементів: x і y)
+        int[][] points = new int[n][2];
+
+        // Генеруємо випадкові координати для кожної точки
+        for (int i = 0; i < n; i++) {
+            points[i][0] = random.nextInt(401) - 200; // координата x від -200 до 200
+            points[i][1] = random.nextInt(401) - 200; // координата y від -200 до 200
+        }
+
+        // Підраховуємо кількість точок у першому квадранті
+        int count = 0;
+        int i = 0;
+        do {
+            int x = points[i][0];
+            int y = points[i][1];
+
+            // Перевіряємо, чи знаходиться точка в першому квадранті
+            if (x > 0 && y > 0) {
+                count++;
+            }
+            i++;
+        } while (i < n);
+
+        // Виводимо результати
+        System.out.println("Кількість точок у першому квадранті: " + count);
+
+        // Виведення всіх точок (необов'язково, для наочності)
+        System.out.println("Список точок:");
+        for (int j = 0; j < n; j++) {
+            System.out.println("Точка " + (j + 1) + ": (" + points[j][0] + ", " + points[j][1] + ")");
+        }
+
+        scanner.close();
+    }
+}
