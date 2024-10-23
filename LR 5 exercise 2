@@ -1,0 +1,17 @@
+public class FunctionTable {
+    public static void main(String[] args) {
+        double xStart = 0;
+        double xEnd = 4;
+        double step = 0.4;
+
+        // Заголовок таблиці
+        System.out.println(" x\t\t y");
+        System.out.println("-------------------");
+
+        // Цикл для обчислення значень y при різних значеннях x
+        for (double x = xStart; x <= xEnd; x += step) {
+            double y = 3 * (Math.pow(x, 3) - Math.pow(x, 2)) / (Math.pow(x, 3) + Math.pow(x, 2));
+            System.out.printf("%.2f\t %.4f\n", x, y); // виводимо значення x і y
+        }
+    }
+}
