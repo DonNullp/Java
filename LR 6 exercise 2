@@ -1,0 +1,41 @@
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        // Примусово встановлюємо локаль для сканера (десятковим роздільником буде крапка)
+        Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
+
+        // Запитуємо кількість елементів у масиві
+        System.out.print("Введіть кількість елементів масиву: ");
+        int n = scanner.nextInt();
+
+        // Створюємо масив дійсних чисел відповідної довжини
+        double[] array = new double[n];
+
+        // Заповнюємо масив значеннями з клавіатури
+        System.out.println("Введіть елементи масиву:");
+        for (int i = 0; i < n; i++) {
+            System.out.print("Елемент " + (i + 1) + ": ");
+            array[i] = scanner.nextDouble();
+        }
+
+        // Знаходимо мінімальне та максимальне значення в масиві
+        double min = array[0];
+        double max = array[0];
+
+        for (int i = 1; i < n; i++) {
+            if (array[i] < min) {
+                min = array[i];
+            }
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+
+        // Виводимо діапазон значень
+        System.out.println("Діапазон значень: від " + min + " до " + max);
+
+        scanner.close();
+    }
+}
